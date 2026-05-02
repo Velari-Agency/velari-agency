@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Velari Agency — AI-Powered Creative & Marketing</title>
+<meta name="description" content="Velari is an AI-powered creative and marketing agency serving North America, Europe, and the Gulf markets."/>
+<meta property="og:url" content="https://www.velari-agency.com"/>
+<meta name="theme-color" content="#050810"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=El+Messiri:wght@400;500;600;700&family=IBM+Plex+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ind:#4C44F2;--indl:#7B73FF;--indd:#2820C8;
+  --ind-08:rgba(76,68,242,.08);--ind-14:rgba(76,68,242,.14);--ind-22:rgba(76,68,242,.22);
+  --gld:#C9943A;--gldl:#E0AC4E;--gldd:#9A7028;
+  --gld-10:rgba(201,148,58,.10);--gld-18:rgba(201,148,58,.18);--gld-28:rgba(201,148,58,.28);
+  --bg0:#050810;--bg1:#0A1020;--bg2:#0D1428;--bg3:#102038;
+  --t100:#FFFFFF;--t88:#DDE3F5;--t72:#9DAAD0;--t50:#5E6B8F;--t32:#3A4260;
+  --gl-bg1:linear-gradient(160deg,rgba(255,255,255,.10) 0%,rgba(255,255,255,.05) 100%);
+  --gl-bg2:linear-gradient(135deg,rgba(255,255,255,.13) 0%,rgba(255,255,255,.06) 55%,rgba(255,255,255,.09) 100%);
+  --gl-spec:linear-gradient(90deg,transparent 5%,rgba(255,255,255,.30) 30%,rgba(255,255,255,.30) 70%,transparent 95%);
+  --gl-spec-str:linear-gradient(90deg,transparent 3%,rgba(255,255,255,.42) 28%,rgba(255,255,255,.42) 72%,transparent 97%);
+  --sh-sm:0 4px 12px rgba(0,0,0,.25),0 1px 3px rgba(0,0,0,.18);
+  --sh-md:0 8px 24px rgba(0,0,0,.35),0 2px 6px rgba(0,0,0,.20),0 1px 0 rgba(255,255,255,.06) inset;
+  --sh-lg:0 16px 48px rgba(0,0,0,.50),0 4px 12px rgba(0,0,0,.30),0 1px 0 rgba(255,255,255,.16) inset,0 -1px 0 rgba(0,0,0,.40) inset;
+  --sh-xl:0 24px 72px rgba(0,0,0,.65),0 8px 24px rgba(0,0,0,.40),0 1px 0 rgba(255,255,255,.22) inset,0 -1px 0 rgba(0,0,0,.50) inset;
+  --b-sub:1px solid rgba(255,255,255,.08);--b-def:1px solid rgba(255,255,255,.13);
+  --b-ele:1px solid rgba(255,255,255,.18);--b-hi:1px solid rgba(255,255,255,.26);
+  --r-sm:6px;--r-md:10px;--r-lg:16px;--r-xl:20px;--r-2xl:28px;
+  --f-en:'Cormorant Garamond','Georgia',serif;
+  --f-ui:'DM Sans',-apple-system,sans-serif;
+  --f-ar-h:'El Messiri','Geeza Pro',sans-serif;
+  --f-ar-b:'IBM Plex Arabic','Geeza Pro',sans-serif;
+  --tr:.3s cubic-bezier(.4,0,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg0);color:var(--t88);font-family:var(--f-ui);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.ar{font-family:var(--f-ar-b);direction:rtl}
+body.ar h1,body.ar h2,body.ar h3,body.ar .section-title,body.ar .hero-headline,
+body.ar .mkt-name,body.ar .svc-name,body.ar .case-title,body.ar .logo-name{font-family:var(--f-ar-h)}
+a{color:inherit;text-decoration:none}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse 75% 60% at 12% 18%,rgba(76,68,242,.16) 0%,transparent 65%),
+    radial-gradient(ellipse 55% 45% at 88% 82%,rgba(201,148,58,.11) 0%,transparent 65%),
+    radial-gradient(ellipse 45% 35% at 80% 22%,rgba(123,115,255,.07) 0%,transparent 55%),
+    radial-gradient(ellipse 60% 50% at 20% 85%,rgba(40,32,200,.08) 0%,transparent 60%);}
+section,nav,footer,.page-zone{position:relative;z-index:1}
+/* GLASS — 3 levels, Apple-grade */
+.glass{position:relative;overflow:hidden}
+.glass::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:var(--gl-spec);border-radius:inherit;z-index:2;pointer-events:none}
+.glass::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");opacity:1;z-index:0}
+.glass>*{position:relative;z-index:1}
+.gl1{background:linear-gradient(160deg,rgba(255,255,255,.08) 0%,rgba(255,255,255,.04) 100%);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:var(--b-def);box-shadow:0 1px 0 rgba(255,255,255,.12) inset,0 -1px 0 rgba(0,0,0,.28) inset,var(--sh-md)}
+.gl2{background:var(--gl-bg1);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);border:var(--b-ele);box-shadow:0 1px 0 rgba(255,255,255,.20) inset,0 -1px 0 rgba(0,0,0,.38) inset,var(--sh-lg)}
+.gl3{background:var(--gl-bg2);backdrop-filter:blur(44px);-webkit-backdrop-filter:blur(44px);border:var(--b-hi);box-shadow:0 1px 0 rgba(255,255,255,.34) inset,0 -1px 0 rgba(0,0,0,.48) inset,var(--sh-xl)}
+.gl3::before{background:var(--gl-spec-str)}
+.gl-ind{background:linear-gradient(135deg,rgba(76,68,242,.18) 0%,rgba(76,68,242,.08) 100%);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);border:1px solid rgba(76,68,242,.30);box-shadow:0 1px 0 rgba(123,115,255,.28) inset,0 -1px 0 rgba(0,0,0,.40) inset,var(--sh-lg),0 0 48px rgba(76,68,242,.12)}
+.gl-gld{background:linear-gradient(135deg,rgba(201,148,58,.18) 0%,rgba(201,148,58,.07) 100%);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);border:1px solid rgba(201,148,58,.28);box-shadow:0 1px 0 rgba(224,172,78,.30) inset,0 -1px 0 rgba(0,0,0,.40) inset,var(--sh-lg)}
+/* BUTTONS */
+.btn-p{background:var(--ind);color:#fff;border:none;border-radius:var(--r-lg);padding:13px 30px;font-size:.93rem;font-weight:600;cursor:pointer;font-family:var(--f-ui);transition:all var(--tr);box-shadow:0 4px 16px rgba(76,68,242,.40),0 1px 0 rgba(255,255,255,.14) inset;display:inline-block}
+.btn-p:hover{background:var(--indl);transform:translateY(-2px);box-shadow:0 12px 40px rgba(76,68,242,.55),0 1px 0 rgba(255,255,255,.14) inset}
+.btn-gl{background:rgba(255,255,255,.08);color:var(--t88);border:var(--b-ele);border-radius:var(--r-lg);padding:13px 30px;font-size:.93rem;font-weight:500;cursor:pointer;font-family:var(--f-ui);transition:all var(--tr);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 1px 0 rgba(255,255,255,.18) inset,var(--sh-sm);display:inline-block}
+.btn-gl:hover{background:rgba(255,255,255,.13);color:var(--t100);transform:translateY(-2px)}
+.btn-gold{background:linear-gradient(135deg,var(--gldd) 0%,var(--gld) 50%,var(--gldl) 100%);color:#fff;border:none;border-radius:var(--r-lg);padding:13px 30px;font-size:.93rem;font-weight:600;cursor:pointer;font-family:var(--f-ui);transition:all var(--tr);box-shadow:0 4px 16px rgba(201,148,58,.35),0 1px 0 rgba(255,255,255,.22) inset;display:inline-block}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(201,148,58,.50),0 1px 0 rgba(255,255,255,.22) inset}
+/* LOGO */
+.v-logo{display:flex;align-items:center;gap:13px;cursor:pointer}
+.v-logo .wm{display:flex;flex-direction:column}
+.v-logo .wm-name{font-family:var(--f-ui);font-size:16px;font-weight:500;letter-spacing:.22em;color:var(--t100);line-height:1}
+.v-logo .wm-sub{font-family:var(--f-ui);font-size:8px;letter-spacing:.20em;text-transform:uppercase;font-weight:300;color:rgba(255,255,255,.40);margin-top:3px}
+/* SOCIAL SVG ICONS */
+.social-link{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:var(--r-md);transition:all var(--tr);background:rgba(255,255,255,.07);border:var(--b-ele)}
+.social-link:hover{background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.26);transform:translateY(-2px);box-shadow:var(--sh-sm)}
+.social-link svg{width:17px;height:17px;fill:var(--t72);transition:fill var(--tr)}
+.social-link:hover svg{fill:var(--t100)}
+.social-link.ig:hover{background:linear-gradient(135deg,rgba(131,58,180,.28),rgba(253,29,29,.2),rgba(252,176,69,.18));border-color:rgba(253,29,29,.3)}
+.social-link.ig:hover svg{fill:#E4405F}
+.social-link.fb:hover{background:rgba(24,119,242,.18);border-color:rgba(24,119,242,.35)}
+.social-link.fb:hover svg{fill:#1877F2}
+.social-link.li:hover{background:rgba(10,102,194,.18);border-color:rgba(10,102,194,.35)}
+.social-link.li:hover svg{fill:#0A66C2}
+.social-link.wa:hover{background:rgba(37,211,102,.14);border-color:rgba(37,211,102,.28)}
+.social-link.wa:hover svg{fill:#25D366}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:72px;transition:all var(--tr)}
+nav.scrolled{background:rgba(5,8,16,.90);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);border-bottom:var(--b-sub)}
+.nav-links{display:flex;align-items:center;gap:2.2rem;list-style:none}
+.nav-links a{font-size:.87rem;font-weight:500;color:var(--t72);transition:color var(--tr)}
+.nav-links a:hover{color:var(--t100)}
+.nav-right{display:flex;align-items:center;gap:.8rem}
+.lang-btn{background:rgba(255,255,255,.07);border:var(--b-ele);border-radius:var(--r-md);padding:7px 15px;font-size:.81rem;font-weight:500;color:var(--t72);cursor:pointer;transition:all var(--tr);font-family:var(--f-ui)}
+.lang-btn:hover{color:var(--t100);background:rgba(255,255,255,.11)}
+.btn-cta-nav{background:var(--ind);color:#fff;border:none;border-radius:var(--r-md);padding:9px 20px;font-size:.87rem;font-weight:600;cursor:pointer;font-family:var(--f-ui);transition:all var(--tr);box-shadow:0 3px 12px rgba(76,68,242,.35)}
+.btn-cta-nav:hover{background:var(--indl);transform:translateY(-1px)}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--t72);margin:5px 0;border-radius:2px}
+.mobile-menu{display:none;position:fixed;inset:0;z-index:200;background:rgba(5,8,16,.97);backdrop-filter:blur(32px);-webkit-backdrop-filter:blur(32px);flex-direction:column;align-items:center;justify-content:center;gap:2.2rem}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:1.6rem;font-family:var(--f-en);color:var(--t88);transition:color var(--tr)}
+body.ar .mobile-menu a{font-family:var(--f-ar-h)}
+.mobile-menu a:hover{color:var(--t100)}
+.mobile-close{position:absolute;top:24px;right:24px;background:none;border:none;color:var(--t72);font-size:1.4rem;cursor:pointer}
+body.ar .mobile-close{right:auto;left:24px}
+/* SECTION */
+section{padding:100px 5%}
+.eyebrow{display:block;font-size:10px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--ind);margin-bottom:14px}
+.eyebrow.gold{color:var(--gld)}
+.section-title{font-family:var(--f-en);font-size:clamp(2rem,5vw,3.4rem);font-weight:300;color:var(--t100);line-height:1.08;margin-bottom:14px}
+.section-sub{font-size:1.05rem;color:var(--t72);max-width:560px;line-height:1.78}
+.s-header{margin-bottom:56px}
+/* TAGS/CHIPS */
+.tag{font-size:.7rem;font-weight:500;padding:3px 10px;border-radius:100px;letter-spacing:.03em}
+.tag-ind{background:var(--ind-14);color:#9A95FF;border:1px solid rgba(76,68,242,.26)}
+.tag-gld{background:var(--gld-10);color:#D4A84C;border:1px solid rgba(201,148,58,.22)}
+.tag-gl{background:rgba(255,255,255,.07);color:var(--t72);border:var(--b-sub)}
+/* FOOTER */
+footer{padding:64px 5% 40px;border-top:var(--b-sub)}
+.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.footer-brand p{font-size:.85rem;color:var(--t50);margin-top:.9rem;max-width:280px;line-height:1.7}
+.footer-social{display:flex;gap:.6rem;margin-top:1.3rem}
+.footer-col-title{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--t50);margin-bottom:14px}
+.footer-links{list-style:none}
+.footer-links li{margin-bottom:8px}
+.footer-links a{font-size:.86rem;color:var(--t72);transition:color var(--tr)}
+.footer-links a:hover{color:var(--t100)}
+.footer-bottom{border-top:var(--b-sub);padding-top:22px;display:flex;align-items:center;justify-content:space-between;font-size:.75rem;color:var(--t32)}
+.footer-dot{color:var(--gld)}
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
+.reveal{opacity:0;transform:translateY(20px);transition:all .7s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+/* RESPONSIVE */
+@media(max-width:960px){.nav-links{display:none}.hamburger{display:block}.footer-grid{grid-template-columns:1fr 1fr}.footer-bottom{flex-direction:column;gap:.5rem;text-align:center}}
+@media(max-width:600px){.footer-grid{grid-template-columns:1fr}.btn-cta-nav{display:none}}
+
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 5% 80px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;background-image:radial-gradient(1px 1px at 18% 22%,rgba(255,255,255,.55) 0%,transparent 100%),radial-gradient(1px 1px at 72% 15%,rgba(255,255,255,.40) 0%,transparent 100%),radial-gradient(1.5px 1.5px at 45% 38%,rgba(255,255,255,.35) 0%,transparent 100%),radial-gradient(1px 1px at 88% 44%,rgba(255,255,255,.45) 0%,transparent 100%),radial-gradient(1px 1px at 10% 68%,rgba(255,255,255,.30) 0%,transparent 100%),radial-gradient(1.5px 1.5px at 62% 72%,rgba(255,255,255,.38) 0%,transparent 100%)}
+.hero>*{position:relative;z-index:1}
+.cv-pill{display:inline-flex;align-items:center;gap:10px;background:rgba(76,68,242,.12);border:1px solid rgba(76,68,242,.28);border-radius:100px;padding:8px 22px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#9A95FF;margin-bottom:48px;animation:fadeUp 1s .1s both}
+.cv-pill::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--ind);box-shadow:0 0 8px var(--ind);animation:pulse 2.4s ease-in-out infinite}
+.hero-logo-wrap{margin-bottom:32px;animation:fadeUp 1s .2s both}
+.hero-title{font-family:var(--f-en);font-size:clamp(72px,12vw,108px);font-weight:300;letter-spacing:.14em;line-height:1.04;background:linear-gradient(145deg,#fff 0%,#D4DCEE 40%,#8090C0 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:16px;animation:fadeUp 1s .3s both}
+.hero-tagline{font-family:var(--f-en);font-size:clamp(1rem,2vw,1.2rem);font-style:italic;font-weight:300;color:var(--t72);margin-bottom:14px;animation:fadeUp 1s .4s both}
+body.ar .hero-title{font-family:var(--f-ar-h);letter-spacing:.02em}
+body.ar .hero-tagline{font-family:var(--f-ar-h);font-style:normal}
+.hero-rule{width:48px;height:1px;margin:0 auto 36px;background:linear-gradient(90deg,transparent,var(--gld),transparent);animation:fadeUp 1s .5s both}
+.hero-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;animation:fadeUp 1s .6s both}
+.hero-stats{display:flex;flex-wrap:wrap;justify-content:center;gap:3rem;margin-top:56px;padding-top:44px;border-top:var(--b-sub);animation:fadeUp 1s .7s both}
+.stat-n{font-family:var(--f-en);font-size:2rem;font-weight:600;color:var(--t100);line-height:1}
+.stat-n.gld{color:var(--gldl)}
+.stat-l{font-size:.78rem;color:var(--t50);margin-top:4px;letter-spacing:.04em}
+/* SERVICES */
+#services{background:linear-gradient(180deg,transparent,rgba(76,68,242,.04),transparent)}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.svc-card{border-radius:var(--r-lg);padding:28px;transition:all var(--tr);cursor:default}
+.svc-card:hover{transform:translateY(-4px)}
+.svc-ico{width:46px;height:46px;border-radius:12px;background:var(--ind-14);border:1px solid rgba(76,68,242,.26);display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:14px;position:relative;z-index:1}
+.svc-name{font-family:var(--f-en);font-size:1.05rem;font-weight:500;color:var(--t100);margin-bottom:8px;position:relative;z-index:1}
+.svc-desc{font-size:.87rem;color:var(--t72);line-height:1.68;margin-bottom:14px;position:relative;z-index:1}
+.svc-ft{display:flex;gap:5px;flex-wrap:wrap;padding-top:12px;border-top:rgba(255,255,255,.07) solid 1px;position:relative;z-index:1}
+/* WHY */
+.why-wrap{display:grid;grid-template-columns:1fr 1.6fr;gap:5rem;align-items:start;max-width:1200px;margin:0 auto}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.why-c{padding:22px 22px 22px 26px;border-left:2px solid var(--ind);border-radius:0 var(--r-lg) var(--r-lg) 0;transition:all var(--tr)}
+body.ar .why-c{border-left:none;border-right:2px solid var(--ind);border-radius:var(--r-lg) 0 0 var(--r-lg);padding:22px 26px 22px 22px}
+.why-c:hover{border-color:var(--indl)}
+.why-n{font-family:var(--f-en);font-size:2rem;font-weight:300;color:rgba(76,68,242,.22);line-height:1;margin-bottom:8px}
+.why-title{font-size:.95rem;font-weight:600;color:var(--t100);margin-bottom:5px}
+.why-text{font-size:.86rem;color:var(--t72);line-height:1.68}
+/* MARKETS */
+#markets{background:linear-gradient(180deg,transparent,rgba(201,148,58,.03),transparent)}
+.mkt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.mkt-c{padding:26px 22px;border-radius:var(--r-xl);transition:all var(--tr)}
+.mkt-c:hover{transform:translateY(-4px)}
+.mkt-flag{font-size:1.6rem;margin-bottom:10px;line-height:1}
+.mkt-name{font-family:var(--f-en);font-size:1.15rem;font-weight:600;color:var(--t100);margin-bottom:3px;line-height:1.2}
+.mkt-sub{font-size:.78rem;color:var(--t50);margin-bottom:10px}
+.mkt-langs{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px}
+.lang-chip{font-size:.67rem;padding:2px 8px;border-radius:100px;font-weight:500;background:var(--ind-14);color:#9A95FF;border:1px solid rgba(76,68,242,.22)}
+.mkt-price{font-size:1.4rem;font-weight:700;color:var(--gldl);font-family:var(--f-en);line-height:1}
+.mkt-per{font-size:.72rem;color:var(--t50);margin-top:2px;margin-bottom:14px}
+.mkt-list{list-style:none;border-top:rgba(255,255,255,.07) solid 1px;padding-top:12px}
+.mkt-list li{font-size:.82rem;color:var(--t72);padding:3px 0;display:flex;align-items:flex-start;gap:7px}
+.mkt-list li::before{content:'✓';color:var(--indl);font-weight:700;flex-shrink:0;font-size:.72rem;margin-top:2px}
+/* PROCESS */
+.proc-track{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;position:relative}
+.proc-track::before{content:'';position:absolute;top:40px;left:12%;right:12%;height:1px;background:linear-gradient(90deg,var(--ind) 0%,var(--gld) 100%);opacity:.22;z-index:0}
+body.ar .proc-track::before{transform:scaleX(-1)}
+.proc-step{text-align:center;position:relative;z-index:1;padding:20px 12px}
+.proc-num{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--f-en);font-size:.9rem;font-weight:600;color:var(--indl);margin:0 auto 14px;transition:all var(--tr)}
+.proc-step:hover .proc-num{background:var(--ind)!important;border-color:var(--ind)!important;color:#fff;transform:scale(1.1)}
+.proc-title{font-size:.9rem;font-weight:600;color:var(--t100);margin-bottom:5px}
+.proc-desc{font-size:.78rem;color:var(--t50);line-height:1.55}
+/* TESTIMONIALS STRIP */
+#testimonials{padding:80px 5%;background:linear-gradient(180deg,transparent,rgba(76,68,242,.04),transparent)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.testi-c{padding:26px;border-radius:var(--r-xl);transition:all var(--tr)}
+.testi-c:hover{transform:translateY(-3px)}
+.testi-stars{color:var(--gldl);font-size:13px;letter-spacing:1px;margin-bottom:12px}
+.testi-body{font-size:.88rem;color:var(--t72);line-height:1.72;margin-bottom:18px;font-style:italic}
+.testi-author{display:flex;align-items:center;gap:11px}
+.testi-av{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;color:#fff;flex-shrink:0}
+.testi-name{font-size:.86rem;font-weight:600;color:var(--t100);margin-bottom:1px}
+.testi-role{font-size:.73rem;color:var(--t50)}
+/* CTA */
+#cta-s{padding:80px 5%}
+.cta-wrap{max-width:720px;margin:0 auto;text-align:center;padding:56px;border-radius:var(--r-2xl)}
+.cta-title{font-family:var(--f-en);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:300;color:var(--t100);margin-bottom:12px}
+body.ar .cta-title{font-family:var(--f-ar-h)}
+.cta-sub{font-size:1rem;color:var(--t72);margin-bottom:32px;line-height:1.75}
+.cta-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:.9rem}
+@media(max-width:960px){.why-wrap{grid-template-columns:1fr!important}.mkt-grid{grid-template-columns:1fr}.proc-track{grid-template-columns:1fr 1fr}.proc-track::before{display:none}.testi-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.svc-grid{grid-template-columns:1fr}.testi-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav id="navbar">
+  <a href="index.html" class="v-logo">
+    <svg width="22" height="26" viewBox="0 0 48 56" fill="none"><defs><filter id="gi"><feGaussianBlur stdDeviation="1.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><filter id="gg"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><polygon points="4,4 20,4 24,52" fill="#4C44F2" filter="url(#gi)"/><polygon points="44,4 28,4 24,52" fill="#4C44F2" fill-opacity=".42"/><line x1="20" y1="4" x2="24" y2="52" stroke="rgba(255,255,255,.36)" stroke-width="1.2"/><circle cx="24" cy="52" r="4" fill="#C9943A" filter="url(#gg)"/><circle cx="24" cy="52" r="2" fill="#E8B84A"/></svg>
+    <div class="wm"><span class="wm-name" data-en="VELARI" data-ar="VELARI">VELARI</span><span class="wm-sub">Agency</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#services" data-en="Services" data-ar="الخدمات">Services</a></li>
+    <li><a href="index.html#why" data-en="Why Velari" data-ar="لماذا فيلاري">Why Velari</a></li>
+    <li><a href="index.html#markets" data-en="Markets" data-ar="الأسواق">Markets</a></li>
+    <li><a href="work.html" data-en="Work" data-ar="أعمالنا">Work</a></li>
+    <li><a href="contact.html" data-en="Contact" data-ar="تواصل">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-btn" id="langBtn" onclick="toggleLang()">العربية</button>
+    <a href="contact.html"><button class="btn-cta-nav" data-en="Start Discovery" data-ar="ابدأ الاستكشاف">Start Discovery</button></a>
+  </div>
+  <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMenu()">&#x2715;</button>
+  <a href="index.html#services" onclick="toggleMenu()" data-en="Services" data-ar="الخدمات">Services</a>
+  <a href="work.html" onclick="toggleMenu()" data-en="Work" data-ar="أعمالنا">Work</a>
+  <a href="contact.html" onclick="toggleMenu()" data-en="Contact" data-ar="تواصل">Contact</a>
+  <a href="contact.html"><button class="btn-p" data-en="Start Discovery" data-ar="ابدأ الاستكشاف">Start Discovery</button></a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="cv-pill" data-en="AI-Powered Creative Agency" data-ar="وكالة إبداعية مدعومة بالذكاء الاصطناعي">AI-Powered Creative Agency</div>
+  <div class="hero-logo-wrap"><svg width="64" height="76" viewBox="0 0 48 56" fill="none"><defs><filter id="gi2"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><filter id="gg2"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><polygon points="4,4 20,4 24,52" fill="#4C44F2" filter="url(#gi2)"/><polygon points="44,4 28,4 24,52" fill="#4C44F2" fill-opacity=".42"/><line x1="20" y1="4" x2="24" y2="52" stroke="rgba(255,255,255,.36)" stroke-width="1.2"/><circle cx="24" cy="52" r="4" fill="#C9943A" filter="url(#gg2)"/><circle cx="24" cy="52" r="2" fill="#E8B84A"/></svg></div>
+  <h1 class="hero-title" data-en="VELARI" data-ar="VELARI">VELARI</h1>
+  <p class="hero-tagline" data-en="We don&apos;t just market — we engineer growth." data-ar="لا نكتفي بالتسويق — نحن نهندس النمو.">We don&apos;t just market — we engineer growth.</p>
+  <div class="hero-rule"></div>
+  <div class="hero-ctas">
+    <a href="contact.html"><button class="btn-p" data-en="Start Your Discovery →" data-ar="ابدأ رحلتك ←">Start Your Discovery →</button></a>
+    <a href="work.html"><button class="btn-gl" data-en="View Our Work" data-ar="استعرض أعمالنا">View Our Work</button></a>
+  </div>
+  <div class="hero-stats">
+    <div style="text-align:center"><div class="stat-n gld">5×</div><div class="stat-l" data-en="Faster Delivery" data-ar="أسرع تنفيذاً">Faster Delivery</div></div>
+    <div style="text-align:center"><div class="stat-n">3</div><div class="stat-l" data-en="Global Regions" data-ar="مناطق عالمية">Global Regions</div></div>
+    <div style="text-align:center"><div class="stat-n" style="color:var(--indl)">AI</div><div class="stat-l" data-en="First Workflow" data-ar="منهجية أولاً">First Workflow</div></div>
+    <div style="text-align:center"><div class="stat-n">100<span style="font-size:1.2rem">%</span></div><div class="stat-l" data-en="Measurable ROI" data-ar="عائد مقاس">Measurable ROI</div></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="s-header reveal">
+    <span class="eyebrow" data-en="What We Do" data-ar="ماذا نقدّم">What We Do</span>
+    <h2 class="section-title" data-en="Services Built for Scale" data-ar="خدمات مصمّمة للنمو">Services Built for Scale</h2>
+    <p class="section-sub" data-en="Six AI-powered services — each designed to deliver measurable business impact, not just activity." data-ar="ست خدمات مدعومة بالذكاء الاصطناعي — كل واحدة مصمّمة لتحقيق أثر تجاري حقيقي.">Six AI-powered services — each designed to deliver measurable business impact, not just activity.</p>
+  </div>
+  <div class="svc-grid">
+    <div class="svc-card glass gl2 reveal"><div class="svc-ico">✍️</div><div class="svc-name" data-en="Content Engine" data-ar="محرك المحتوى">Content Engine</div><p class="svc-desc" data-en="AI-powered monthly content: blog articles, social posts, email newsletters, and ad copy — aligned to your brand voice across every market." data-ar="محتوى شهري مدعوم بالذكاء الاصطناعي: مقالات، منشورات، نشرات بريدية وإعلانات.">AI-powered monthly content: blog articles, social posts, email newsletters, and ad copy — aligned to your brand voice across every market.</p><div class="svc-ft"><span class="tag tag-ind">Blog</span><span class="tag tag-ind">Social</span><span class="tag tag-gl">Email</span></div></div>
+    <div class="svc-card glass gl2 reveal"><div class="svc-ico" style="background:var(--gld-10);border-color:rgba(201,148,58,.24)">🎨</div><div class="svc-name" data-en="Brand Identity" data-ar="الهوية البصرية">Brand Identity</div><p class="svc-desc" data-en="Full visual identity: logo, colors, typography, brand guidelines, and scalable templates — built for every platform and language." data-ar="هوية بصرية متكاملة: شعار، ألوان، خطوط، دليل هوية وقوالب قابلة للتوسع.">Full visual identity: logo, colors, typography, brand guidelines, and scalable templates — built for every platform and language.</p><div class="svc-ft"><span class="tag tag-gld">Logo</span><span class="tag tag-gld">Brand Guide</span></div></div>
+    <div class="svc-card glass gl2 reveal"><div class="svc-ico">📊</div><div class="svc-name" data-en="Paid Ads AI" data-ar="الإعلانات المدفوعة">Paid Ads AI</div><p class="svc-desc" data-en="Data-driven paid advertising on Meta and Google. AI-optimized targeting, creatives, and budgets — every dollar tracked to real outcomes." data-ar="إعلانات مدفوعة على Meta وGoogle. استهداف وتصميم وميزانية محسّنة بالذكاء الاصطناعي.">Data-driven paid advertising on Meta and Google. AI-optimized targeting, creatives, and budgets — every dollar tracked to real outcomes.</p><div class="svc-ft"><span class="tag tag-ind">Meta Ads</span><span class="tag tag-ind">Google Ads</span></div></div>
+    <div class="svc-card glass gl2 reveal"><div class="svc-ico" style="background:var(--gld-10);border-color:rgba(201,148,58,.24)">🧠</div><div class="svc-name" data-en="Marketing Strategy" data-ar="الاستراتيجية التسويقية">Marketing Strategy</div><p class="svc-desc" data-en="Business-first strategy consulting: market analysis, competitive positioning, growth roadmaps, and ROI frameworks — grounded in commercial reality." data-ar="استشارات استراتيجية تنطلق من الأعمال. تحليل السوق، تحديد المكانة، خارطة النمو وإطار قياس العائد.">Business-first strategy consulting: market analysis, competitive positioning, growth roadmaps, and ROI frameworks — grounded in commercial reality.</p><div class="svc-ft"><span class="tag tag-gld">Strategy</span><span class="tag tag-gld">Consulting</span></div></div>
+    <div class="svc-card glass gl2 reveal"><div class="svc-ico">📧</div><div class="svc-name" data-en="Email Marketing" data-ar="التسويق البريدي">Email Marketing</div><p class="svc-desc" data-en="Automated sequences that nurture leads, retain customers, and drive repeat purchases — personalized at scale with AI segmentation." data-ar="تسلسلات آلية تبني العلاقة مع العملاء وتحفّز الشراء المتكرر.">Automated sequences that nurture leads, retain customers, and drive repeat purchases — personalized at scale.</p><div class="svc-ft"><span class="tag tag-ind">Automation</span><span class="tag tag-ind">Segmentation</span></div></div>
+    <div class="svc-card glass gl2 reveal"><div class="svc-ico" style="background:var(--gld-10);border-color:rgba(201,148,58,.24)">🎯</div><div class="svc-name" data-en="Lead Generation" data-ar="توليد العملاء المحتملين">Lead Generation</div><p class="svc-desc" data-en="Systematic pipeline building. Multi-channel lead capture, qualification funnels, and CRM integration — so your team closes, not chases." data-ar="بناء منهجي لقاعدة العملاء. استقطاب متعدد القنوات، فلترة وربط CRM.">Systematic pipeline building. Multi-channel lead capture, qualification funnels, and CRM integration — so your team closes, not chases.</p><div class="svc-ft"><span class="tag tag-gld">LinkedIn</span><span class="tag tag-gld">Funnels</span></div></div>
+  </div>
+</section>
+
+<!-- WHY VELARI -->
+<section id="why" style="border-top:var(--b-sub)">
+  <div class="why-wrap">
+    <div class="reveal">
+      <span class="eyebrow" data-en="Why Choose Us" data-ar="لماذا تختارنا">Why Choose Us</span>
+      <h2 class="section-title" data-en="The Velari Difference" data-ar="ما يميّز فيلاري">The Velari Difference</h2>
+      <p class="section-sub" data-en="Most agencies sell activity. We sell results. Here is how we are structurally different from the market." data-ar="معظم الوكالات تبيع نشاطاً. نحن نبيع نتائج. هكذا نختلف هيكلياً عن السوق.">Most agencies sell activity. We sell results. Here is how we are structurally different from the market.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-c glass gl1 reveal"><div class="why-n">01</div><div class="why-title" data-en="AI-First Delivery" data-ar="تنفيذ يعتمد الذكاء الاصطناعي أولاً">AI-First Delivery</div><p class="why-text" data-en="We use AI across the entire production pipeline. What takes traditional agencies weeks, we deliver in days — without quality compromise." data-ar="نستخدم الذكاء الاصطناعي في كامل سلسلة الإنتاج. ما يستغرق أسابيع نسلّمه في أيام.">We use AI across the entire production pipeline. What takes traditional agencies weeks, we deliver in days — without quality compromise.</p></div>
+      <div class="why-c glass gl1 reveal"><div class="why-n">02</div><div class="why-title" data-en="Business-First Thinking" data-ar="تفكير يبدأ من الأعمال">Business-First Thinking</div><p class="why-text" data-en="Every deliverable is tied to a commercial goal. We understand P&amp;L, not just impressions. Strategy comes before execution, always." data-ar="كل مخرج مرتبط بهدف تجاري. نفهم الربح والخسارة، لا فقط الانطباعات.">Every deliverable is tied to a commercial goal. We understand P&amp;L, not just impressions. Strategy comes before execution, always.</p></div>
+      <div class="why-c glass gl1 reveal"><div class="why-n">03</div><div class="why-title" data-en="Multilingual Execution" data-ar="تنفيذ متعدد اللغات">Multilingual Execution</div><p class="why-text" data-en="Arabic and English, executed natively. US, European, and Gulf cultural fluency — delivered with precision in each market." data-ar="عربي وإنجليزي، تنفيذ أصيل في كليهما. فهم ثقافي لأسواق أمريكا وأوروبا والخليج.">Arabic and English, executed natively. US, European, and Gulf cultural fluency — delivered with precision in each market.</p></div>
+      <div class="why-c glass gl1 reveal"><div class="why-n">04</div><div class="why-title" data-en="Measurable Results" data-ar="نتائج قابلة للقياس">Measurable Results</div><p class="why-text" data-en="Real-time dashboards, monthly reports, and clear KPIs. You see exactly what your investment is generating — every month." data-ar="لوحات متابعة فورية، تقارير شهرية، ومؤشرات واضحة. ترى بالضبط ما تنتجه استثماراتك.">Real-time dashboards, monthly reports, and clear KPIs. You see exactly what your investment is generating — every month.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKETS -->
+<section id="markets" style="border-top:var(--b-sub)">
+  <div class="s-header reveal" style="text-align:center">
+    <span class="eyebrow" style="display:block;text-align:center" data-en="Our Markets" data-ar="أسواقنا">Our Markets</span>
+    <h2 class="section-title" data-en="Global Reach. Local Expertise." data-ar="وصول عالمي. خبرة محلية.">Global Reach. Local Expertise.</h2>
+    <p class="section-sub" style="margin:0 auto" data-en="Three regional focuses — each with dedicated market intelligence, language capability, and pricing calibrated to local standards." data-ar="ثلاث تركيزات إقليمية — لكل واحدة ذكاء سوقي متخصص، وقدرة لغوية، وأسعار وفق معايير السوق المحلي.">Three regional focuses — each with dedicated market intelligence, language capability, and pricing calibrated to local standards.</p>
+  </div>
+  <div class="mkt-grid">
+    <div class="mkt-c glass gl1 reveal">
+      <div class="mkt-flag">🌎🌍</div>
+      <div class="mkt-name" data-en="North America &amp; Europe" data-ar="أمريكا الشمالية وأوروبا">North America &amp; Europe</div>
+      <div class="mkt-sub" data-en="English-first. Global standards." data-ar="إنجليزي أولاً. معايير عالمية.">English-first. Global standards.</div>
+      <div class="mkt-langs"><span class="lang-chip">English</span><span class="lang-chip">French</span><span class="lang-chip">Spanish</span></div>
+      <div class="mkt-price" data-en="From $1,500" data-ar="من $1,500">From $1,500</div><div class="mkt-per" data-en="/ month" data-ar="/ شهر">/ month</div>
+      <ul class="mkt-list">
+        <li data-en="US &amp; EU market positioning" data-ar="تموضع في السوقين الأمريكي والأوروبي">US &amp; EU market positioning</li>
+        <li data-en="SEO-optimized English content" data-ar="محتوى إنجليزي محسّن لمحركات البحث">SEO-optimized English content</li>
+        <li data-en="LinkedIn &amp; Meta campaigns" data-ar="حملات LinkedIn وMeta">LinkedIn &amp; Meta campaigns</li>
+        <li data-en="Global brand standards" data-ar="معايير برند عالمية">Global brand standards</li>
+      </ul>
+    </div>
+    <div class="mkt-c glass gl2 reveal" style="border-color:rgba(76,68,242,.32)">
+      <div class="mkt-flag">🇦🇪🌍</div>
+      <div class="mkt-name" data-en="UAE &amp; Gulf Arab Countries" data-ar="الإمارات والخليج العربي">UAE &amp; Gulf Arab Countries</div>
+      <div class="mkt-sub" data-en="Bilingual. Regional excellence." data-ar="ثنائي اللغة. تميّز إقليمي.">Bilingual. Regional excellence.</div>
+      <div class="mkt-langs"><span class="lang-chip">Arabic</span><span class="lang-chip">English</span></div>
+      <div class="mkt-price" data-en="From $750" data-ar="من $750">From $750</div><div class="mkt-per" data-en="/ month" data-ar="/ شهر">/ month</div>
+      <ul class="mkt-list">
+        <li data-en="Bilingual Arabic &amp; English content" data-ar="محتوى عربي وإنجليزي">Bilingual Arabic &amp; English content</li>
+        <li data-en="GCC platform &amp; culture expertise" data-ar="خبرة منصات الخليج والثقافة">GCC platform &amp; culture expertise</li>
+        <li data-en="UAE, KSA, Kuwait, Qatar, Bahrain, Oman" data-ar="الإمارات، السعودية، الكويت، قطر، البحرين، عُمان">UAE, KSA, Kuwait, Qatar, Bahrain, Oman</li>
+        <li data-en="Regional brand positioning" data-ar="تحديد مكانة إقليمي">Regional brand positioning</li>
+      </ul>
+    </div>
+    <div class="mkt-c glass gl1 reveal">
+      <div class="mkt-flag">🇮🇶🌐</div>
+      <div class="mkt-name" data-en="Iraq &amp; Rest of World" data-ar="العراق وباقي العالم">Iraq &amp; Rest of World</div>
+      <div class="mkt-sub" data-en="Arabic-first. Local intelligence." data-ar="عربي أولاً. ذكاء محلي.">Arabic-first. Local intelligence.</div>
+      <div class="mkt-langs"><span class="lang-chip">Arabic</span><span class="lang-chip">English</span></div>
+      <div class="mkt-price" data-en="From $450" data-ar="من $450">From $450</div><div class="mkt-per" data-en="/ month" data-ar="/ شهر">/ month</div>
+      <ul class="mkt-list">
+        <li data-en="Full Arabic content production" data-ar="إنتاج محتوى عربي كامل">Full Arabic content production</li>
+        <li data-en="Local market &amp; cultural insights" data-ar="رؤى السوق المحلي والثقافة">Local market &amp; cultural insights</li>
+        <li data-en="Iraq, Jordan, Egypt, Levant &amp; beyond" data-ar="العراق، الأردن، مصر، الشام وما بعدها">Iraq, Jordan, Egypt, Levant &amp; beyond</li>
+        <li data-en="Accessible entry pricing" data-ar="تسعير ميسور للوصول">Accessible entry pricing</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" style="border-top:var(--b-sub)">
+  <div class="s-header reveal" style="text-align:center">
+    <span class="eyebrow" style="display:block;text-align:center" data-en="How It Works" data-ar="كيف نعمل">How It Works</span>
+    <h2 class="section-title" data-en="Simple. Structured. Fast." data-ar="بسيط. منظّم. سريع.">Simple. Structured. Fast.</h2>
+  </div>
+  <div class="proc-track">
+    <div class="proc-step reveal"><div class="proc-num glass gl2">01</div><div class="proc-title" data-en="Discovery" data-ar="الاستكشاف">Discovery</div><p class="proc-desc" data-en="Fill our discovery questionnaire. 10 focused questions. No generic calls." data-ar="أكمل استبيان الاكتشاف. 10 أسئلة محددة. بدون مكالمات عامة.">Fill our discovery questionnaire. 10 focused questions. No generic calls.</p></div>
+    <div class="proc-step reveal"><div class="proc-num glass gl2">02</div><div class="proc-title" data-en="Strategy Brief" data-ar="الموجز الاستراتيجي">Strategy Brief</div><p class="proc-desc" data-en="Custom growth strategy with KPIs, channels, and a 90-day roadmap — within 48 hours." data-ar="استراتيجية نمو مخصصة بمؤشرات وقنوات وخارطة 90 يوماً.">Custom growth strategy with KPIs, channels, and a 90-day roadmap — within 48 hours.</p></div>
+    <div class="proc-step reveal"><div class="proc-num glass gl2">03</div><div class="proc-title" data-en="AI Production" data-ar="الإنتاج بالذكاء الاصطناعي">AI Production</div><p class="proc-desc" data-en="We build and execute: content, visuals, campaigns — delivered consistently every month." data-ar="ننفّذ ونبني: محتوى، تصاميم، حملات — مستمر كل شهر.">We build and execute: content, visuals, campaigns — delivered consistently every month.</p></div>
+    <div class="proc-step reveal"><div class="proc-num glass gl2">04</div><div class="proc-title" data-en="Measure &amp; Grow" data-ar="قس ونمُ">Measure &amp; Grow</div><p class="proc-desc" data-en="Monthly reports, real-time dashboards, continuous optimization — every metric tied to ROI." data-ar="تقارير شهرية، لوحات فورية، تحسين مستمر — كل مؤشر مرتبط بعائد الاستثمار.">Monthly reports, real-time dashboards, continuous optimization — every metric tied to ROI.</p></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="s-header reveal" style="text-align:center">
+    <span class="eyebrow" style="display:block;text-align:center" data-en="Client Voices" data-ar="أصوات العملاء">Client Voices</span>
+    <h2 class="section-title" data-en="What Our Clients Say" data-ar="ماذا يقول عملاؤنا">What Our Clients Say</h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-c glass gl1 reveal"><div class="testi-stars">★★★★★</div><p class="testi-body" data-en="Velari completely transformed how we think about content. Within 60 days, our LinkedIn engagement tripled and we started getting inbound leads we never had before. The AI-powered approach delivers quality at a speed I didn't think was possible." data-ar="غيّرت فيلاري طريقة تفكيرنا في المحتوى كلياً. خلال 60 يوماً، تضاعف تفاعل LinkedIn ثلاث مرات وبدأنا نستقبل عملاء محتملين لم نرهم من قبل.">Velari completely transformed how we think about content. Within 60 days, our LinkedIn engagement tripled and we started getting inbound leads we never had before. The AI-powered approach delivers quality at a speed I didn't think was possible.</p><div class="testi-author"><div class="testi-av" style="background:linear-gradient(135deg,#4C44F2,#7B73FF)">JM</div><div><div class="testi-name">James Mitchell</div><div class="testi-role">CEO, Apex Solutions Group &middot; Dallas, TX</div></div></div></div>
+    <div class="testi-c glass gl1 reveal" dir="rtl"><div class="testi-stars">★★★★★</div><p class="testi-body" style="font-family:var(--f-ar-b);text-align:right">فريق فيلاري استثنائي في تقديم المحتوى ثنائي اللغة. كل مقال وكل منشور يعكس فهماً عميقاً للسوق الخليجي والمتطلبات الثقافية. النتائج ملموسة من الشهر الأول.</p><div class="testi-author"><div class="testi-av" style="background:linear-gradient(135deg,#C9943A,#E0AC4E)">نم</div><div style="text-align:right"><div class="testi-name" style="font-family:var(--f-ar-b)">نورة المنصوري</div><div class="testi-role" style="font-family:var(--f-ar-b)">مديرة التسويق، مجموعة الفهد التجارية &middot; دبي</div></div></div></div>
+    <div class="testi-c glass gl1 reveal"><div class="testi-stars">★★★★★</div><p class="testi-body" data-en="I was skeptical about AI in marketing, but Velari proved me wrong. The strategy brief they delivered in 48 hours was more insightful than anything we had received from a traditional agency in months." data-ar="كنت متشككاً، لكن فيلاري أثبتت أنني كنت مخطئاً. الموجز الاستراتيجي الذي سلّموه خلال 48 ساعة كان أكثر عمقاً مما تلقيناه من وكالات تقليدية في أشهر.">I was skeptical about AI in marketing, but Velari proved me wrong. The strategy brief they delivered in 48 hours was more insightful than anything we had received from a traditional agency in months.</p><div class="testi-author"><div class="testi-av" style="background:var(--bg2);border:var(--b-ele)">LK</div><div><div class="testi-name">Layla Karim</div><div class="testi-role">Founder, TechBridge MENA &middot; Abu Dhabi</div></div></div></div>
+  </div>
+  <div style="text-align:center;margin-top:2rem"><a href="work.html#testimonials"><button class="btn-gl" style="font-size:.87rem;padding:11px 26px" data-en="Read All Reviews →" data-ar="اقرأ كل التقييمات ←">Read All Reviews →</button></a></div>
+</section>
+
+<!-- CTA -->
+<section id="cta-s" style="border-top:var(--b-sub)">
+  <div class="cta-wrap glass gl3 reveal">
+    <h2 class="cta-title" data-en="Ready to Engineer Your Growth?" data-ar="مستعد لبناء نموك؟">Ready to Engineer Your Growth?</h2>
+    <p class="cta-sub" data-en="Start with our discovery questionnaire. 10 minutes. We respond with a tailored strategy in 48 hours — no commitment required." data-ar="ابدأ باستبيان الاكتشاف. 10 دقائق. نردّ باستراتيجية مخصصة خلال 48 ساعة — بلا أي التزام.">Start with our discovery questionnaire. 10 minutes. We respond with a tailored strategy in 48 hours — no commitment required.</p>
+    <div class="cta-btns"><a href="contact.html"><button class="btn-p" data-en="Start Discovery →" data-ar="ابدأ الاستكشاف ←">Start Discovery →</button></a><a href="mailto:info@velari-agency.com"><button class="btn-gl">info@velari-agency.com</button></a></div>
+  </div>
+</section>
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="v-logo"><svg width="18" height="22" viewBox="0 0 48 56" fill="none"><polygon points="4,4 20,4 24,52" fill="#4C44F2"/><polygon points="44,4 28,4 24,52" fill="#4C44F2" fill-opacity=".42"/><line x1="20" y1="4" x2="24" y2="52" stroke="rgba(255,255,255,.36)" stroke-width="1.2"/><circle cx="24" cy="52" r="4" fill="#C9943A"/><circle cx="24" cy="52" r="2" fill="#E8B84A"/></svg><div class="wm"><span class="wm-name">VELARI</span><span class="wm-sub">Agency</span></div></a>
+      <p data-en="AI-powered creative and marketing agency. North America, Europe, and Gulf markets." data-ar="وكالة إبداعية وتسويقية مدعومة بالذكاء الاصطناعي. أمريكا الشمالية وأوروبا والخليج.">AI-powered creative and marketing agency. North America, Europe, and Gulf markets.</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/velari-agency" target="_blank" rel="noopener" class="social-link ig" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="https://facebook.com/velari-agency" target="_blank" rel="noopener" class="social-link fb" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="https://linkedin.com/company/velari-agency" target="_blank" rel="noopener" class="social-link li" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="https://wa.me/971555007665" target="_blank" rel="noopener" class="social-link wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+      </div>
+    </div>
+    <div><div class="footer-col-title" data-en="Services" data-ar="الخدمات">Services</div>
+      <ul class="footer-links">
+        <li><a href="index.html#services" data-en="Content Engine" data-ar="محرك المحتوى">Content Engine</a></li>
+        <li><a href="index.html#services" data-en="Brand Identity" data-ar="الهوية البصرية">Brand Identity</a></li>
+        <li><a href="index.html#services" data-en="Paid Ads AI" data-ar="الإعلانات المدفوعة">Paid Ads AI</a></li>
+        <li><a href="index.html#services" data-en="Marketing Strategy" data-ar="الاستراتيجية">Marketing Strategy</a></li>
+      </ul>
+    </div>
+    <div><div class="footer-col-title" data-en="Company" data-ar="الشركة">Company</div>
+      <ul class="footer-links">
+        <li><a href="work.html" data-en="Our Work" data-ar="أعمالنا">Our Work</a></li>
+        <li><a href="work.html#testimonials" data-en="Testimonials" data-ar="تقييمات العملاء">Testimonials</a></li>
+        <li><a href="contact.html" data-en="Start Discovery" data-ar="ابدأ الاستكشاف">Start Discovery</a></li>
+      </ul>
+    </div>
+    <div><div class="footer-col-title" data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</div>
+      <ul class="footer-links">
+        <li><a href="mailto:info@velari-agency.com">info@velari-agency.com</a></li>
+        <li><a href="https://wa.me/971555007665" target="_blank" data-en="WhatsApp" data-ar="واتساب">WhatsApp</a></li>
+        <li><a href="contact.html" data-en="Book Discovery" data-ar="احجز الاستشارة">Book Discovery</a></li>
+      </ul>
+      <p style="font-size:.7rem;color:var(--t32);margin-top:.8rem">@velari-agency</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&#169; 2026 Velari Agency <span class="footer-dot">&#183;</span> Dubai, UAE <span class="footer-dot">&#183;</span> <a href="https://www.velari-agency.com" style="color:var(--indl)">velari-agency.com</a></span>
+    <span data-en="AI-Powered. Results-Driven." data-ar="مدعوم بالذكاء الاصطناعي. موجّه بالنتائج.">AI-Powered. Results-Driven.</span>
+  </div>
+</footer>
+<script>
+let isAr=false;
+function toggleLang(){
+  isAr=!isAr;
+  document.body.classList.toggle('ar',isAr);
+  document.documentElement.setAttribute('lang',isAr?'ar':'en');
+  document.documentElement.setAttribute('dir',isAr?'rtl':'ltr');
+  const btn=document.getElementById('langBtn');
+  if(btn)btn.textContent=isAr?'English':'العربية';
+  document.querySelectorAll('[data-en]').forEach(el=>{
+    el.textContent=isAr?el.getAttribute('data-ar'):el.getAttribute('data-en');
+  });
+}
+const nav=document.getElementById('navbar');
+if(nav)window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>30));
+function toggleMenu(){const m=document.getElementById('mobileMenu');if(m)m.classList.toggle('open')}
+const obs=new IntersectionObserver((entries)=>{
+  entries.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('visible'),i*60)});
+},{threshold:.08,rootMargin:'0px 0px -28px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const h=a.getAttribute('href');if(!h||h==='#')return;
+    const t=document.querySelector(h);
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
+  });
+});
+</script>
+</body>
+</html>
