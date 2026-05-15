@@ -549,37 +549,37 @@ textarea{resize:vertical;min-height:90px}
         <span class="hint">اختر كل ما ينطبق عليك</span>
       </label>
       <div class="options">
-        <label class="opt-label" onclick="toggleCheck(this)">
+        <label class="opt-label" onclick="toggleCheck(this, event)">
           <input type="checkbox" name="fields" value="إدارة سوشال ميديا">
           <div class="opt-check square"></div>
           إدارة سوشال ميديا (نشر + جدولة + تفاعل)
         </label>
-        <label class="opt-label" onclick="toggleCheck(this)">
+        <label class="opt-label" onclick="toggleCheck(this, event)">
           <input type="checkbox" name="fields" value="كتابة محتوى">
           <div class="opt-check square"></div>
           كتابة محتوى (مقالات، منشورات، بريد إلكتروني)
         </label>
-        <label class="opt-label" onclick="toggleCheck(this)">
+        <label class="opt-label" onclick="toggleCheck(this, event)">
           <input type="checkbox" name="fields" value="إدارة حسابات عملاء">
           <div class="opt-check square"></div>
           إدارة حسابات عملاء (Account Management)
         </label>
-        <label class="opt-label" onclick="toggleCheck(this)">
+        <label class="opt-label" onclick="toggleCheck(this, event)">
           <input type="checkbox" name="fields" value="تصميم بصري">
           <div class="opt-check square"></div>
           تصميم بصري (Canva / Photoshop)
         </label>
-        <label class="opt-label" onclick="toggleCheck(this)">
+        <label class="opt-label" onclick="toggleCheck(this, event)">
           <input type="checkbox" name="fields" value="إعلانات مدفوعة">
           <div class="opt-check square"></div>
           إعلانات مدفوعة (Meta Ads / Google Ads)
         </label>
-        <label class="opt-label" onclick="toggleCheck(this)">
+        <label class="opt-label" onclick="toggleCheck(this, event)">
           <input type="checkbox" name="fields" value="تحليل بيانات وتقارير">
           <div class="opt-check square"></div>
           تحليل بيانات وتقارير الأداء
         </label>
-        <label class="opt-label" onclick="toggleCheck(this)">
+        <label class="opt-label" onclick="toggleCheck(this, event)">
           <input type="checkbox" name="fields" value="إنتاج فيديو وريلز">
           <div class="opt-check square"></div>
           إنتاج فيديو وريلز (Reels / TikTok)
@@ -693,31 +693,31 @@ textarea{resize:vertical;min-height:90px}
         <span class="hint">اختر كل ما تعرفه ولو بشكل أساسي</span>
       </label>
       <div class="options">
-        <label class="opt-label" onclick="toggleCheck(this)">
+        <label class="opt-label" onclick="toggleCheck(this, event)">
           <input type="checkbox" name="ai_tools" value="ChatGPT">
           <div class="opt-check square"></div>ChatGPT
         </label>
-        <label class="opt-label" onclick="toggleCheck(this)">
+        <label class="opt-label" onclick="toggleCheck(this, event)">
           <input type="checkbox" name="ai_tools" value="Claude (Anthropic)">
           <div class="opt-check square"></div>Claude (Anthropic)
         </label>
-        <label class="opt-label" onclick="toggleCheck(this)">
+        <label class="opt-label" onclick="toggleCheck(this, event)">
           <input type="checkbox" name="ai_tools" value="Canva AI / Magic Write">
           <div class="opt-check square"></div>Canva AI / Magic Write
         </label>
-        <label class="opt-label" onclick="toggleCheck(this)">
+        <label class="opt-label" onclick="toggleCheck(this, event)">
           <input type="checkbox" name="ai_tools" value="Midjourney / DALL·E">
           <div class="opt-check square"></div>Midjourney / DALL·E (توليد صور)
         </label>
-        <label class="opt-label" onclick="toggleCheck(this)">
+        <label class="opt-label" onclick="toggleCheck(this, event)">
           <input type="checkbox" name="ai_tools" value="CapCut AI / Runway">
           <div class="opt-check square"></div>CapCut AI / Runway (فيديو)
         </label>
-        <label class="opt-label" onclick="toggleCheck(this)">
+        <label class="opt-label" onclick="toggleCheck(this, event)">
           <input type="checkbox" name="ai_tools" value="ElevenLabs / أدوات صوت">
           <div class="opt-check square"></div>ElevenLabs / أدوات صوت
         </label>
-        <label class="opt-label" onclick="toggleCheck(this)">
+        <label class="opt-label" onclick="toggleCheck(this, event)">
           <input type="checkbox" name="ai_tools" value="لم أستخدم أياً منها">
           <div class="opt-check square"></div>لم أستخدم أياً منها بعد — لكنني مستعد للتعلم
         </label>
@@ -1013,7 +1013,8 @@ function selectOpt(label, name){
 }
 
 // ─── Checkbox toggle ───
-function toggleCheck(label){
+function toggleCheck(label, event){
+  if(event) event.preventDefault();
   label.classList.toggle('selected');
   label.querySelector('input').checked = label.classList.contains('selected');
   updateProgress();
@@ -1094,11 +1095,23 @@ document.getElementById('applicationForm').addEventListener('submit', async func
   btn.disabled = true;
   btn.textContent = 'جاري الإرسال...';
 
-  const data = new FormData(this);
+  // Convert form to JSON object for Stein API
+  const formData = new FormData(this);
+  const data = {};
+  for(const [key, value] of formData.entries()){
+    if(data[key] !== undefined){
+      // Merge multiple checkbox values into comma-separated string
+      data[key] = data[key] + '، ' + value;
+    } else {
+      data[key] = value;
+    }
+  }
+
   try {
-    const res = await fetch('https://api.steinhq.com/v1/storages/6a0768ce92b1163e97f3a836', {
-      method:'POST', body: data,
-      headers:{'Accept':'application/json'}
+    const res = await fetch('https://api.steinhq.com/v1/storages/6a0768ce92b1163e97f3a836/Velari%20Agency%20-%20Applicants%20Data%202026', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify([data])
     });
     if(res.ok){
       document.getElementById('formPage').style.display = 'none';
