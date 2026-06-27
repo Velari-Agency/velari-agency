@@ -19,13 +19,7 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '2128692711022071');
 fbq('track', 'PageView');
-  /* ─── Track WhatsApp clicks ─── */
-document.querySelectorAll('a[href*="wa.me"]').forEach(a=>{
-a.addEventListener('click',()=>{
-if(typeof fbq!=='undefined')fbq('track','Contact',{content_name:'WhatsApp_ContentEngine'});
-if(typeof gtag!=='undefined')gtag('event','whatsapp_click',{event_category:'engagement',event_label:'content_engine'});
-});
-});
+fbq('track', 'Contact');
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=2128692711022071&ev=PageView&noscript=1"
@@ -699,6 +693,13 @@ if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
 });
 });
 
+    /* ─── Track WhatsApp clicks ─── */
+document.querySelectorAll('a[href*="wa.me"]').forEach(a=>{
+a.addEventListener('click',()=>{
+if(typeof fbq!=='undefined')fbq('track','Contact',{content_name:'WhatsApp_ContentEngine'});
+if(typeof gtag!=='undefined')gtag('event','whatsapp_click',{event_category:'engagement',event_label:'content_engine'});
+});
+});
 </script>
 </body>
 </html>
