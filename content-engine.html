@@ -693,13 +693,13 @@ if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
 });
 });
 
-    /* ─── Track WhatsApp clicks ─── */
+    /* ─── Track WhatsApp clicks ───
 document.querySelectorAll('a[href*="wa.me"]').forEach(a=>{
 a.addEventListener('click',()=>{
 if(typeof fbq!=='undefined')fbq('track','Contact',{content_name:'WhatsApp_ContentEngine'});
 if(typeof gtag!=='undefined')gtag('event','whatsapp_click',{event_category:'engagement',event_label:'content_engine'});
 });
-});
+});*/
 </script>
 </body>
 </html>
