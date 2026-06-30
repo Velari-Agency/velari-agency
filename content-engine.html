@@ -668,7 +668,7 @@ setCurrency();
 }
 
 /* ─── Currency Geo-Detection ─── */
-const gulfTZ=['Asia/Dubai','Asia/Muscat','Asia/Qatar','Asia/Bahrain','Asia/Kuwait','Asia/Riyadh','Asia/Aden','Asia/Baghdad'];
+const gulfTZ=['Asia/Dubai','Asia/Muscat','Asia/Qatar','Asia/Bahrain','Asia/Kuwait','Asia/Riyadh','Asia/Aden'];
 function isGulf(){
 try{const tz=Intl.DateTimeFormat().resolvedOptions().timeZone;return gulfTZ.some(g=>tz.includes(g.split('/')[1]))}
 catch(e){return true}
